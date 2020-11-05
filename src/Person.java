@@ -1,89 +1,105 @@
-public class Person {
-    private String fName;
-    private String lName;
-    private String address;
-    private String city;
-    private String state;
-    private int zip;
-    private String phoneNumber;
-    private String emailId;
+            public class Person {
+                private String fName;
+                private String lName;
+                private String address;
+                private String city;
+                private String state;
+                private int zip;
+                private String phoneNumber;
+                private String emailId;
 
 
-    public String getfName() {
-        return fName;
-    }
+                public String getfName() {
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
+                    return fName;
+                }
 
-    public String getlName() {
-        return lName;
-    }
+                public void setfName(String fName) {
 
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
+                    this.fName = fName;
+                }
 
-    public String getAddress() {
-        return address;
-    }
+                public String getlName() {
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+                    return lName;
+                }
 
-    public String getCity() {
-        return city;
-    }
+                public void setlName(String lName) {
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+                    this.lName = lName;
+                }
 
-    public String getState() {
-        return state;
-    }
+                public String getAddress() {
 
-    public void setState(String state) {
-        this.state = state;
-    }
+                    return address;
+                }
 
-    public int getZip() {
-        return zip;
-    }
+                public void setAddress(String address) {
 
-    public void setZip(int zip) {
-        this.zip = zip;
-    }
+                    this.address = address;
+                }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+                public String getCity() {
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+                    return city;
+                }
 
-    public String getEmailId() {
-        return emailId;
-    }
+                public void setCity(String city) {
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
+                    this.city = city;
+                }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                ", emailId='" + emailId + '\'' +
-                '}';
-    }
-}
+                public String getState() {
+
+                    return state;
+                }
+
+                public void setState(String state) {
+
+                    this.state = state;
+                }
+
+                public int getZip() {
+
+                    return zip;
+                }
+
+                public void setZip(int zip) {
+
+                    this.zip = zip;
+                }
+
+                public String getPhoneNumber() {
+
+                    return phoneNumber;
+                }
+
+                public void setPhoneNumber(String phoneNumber) {
+
+                    this.phoneNumber = phoneNumber;
+                }
+
+                public String getEmailId() {
+
+                    return emailId;
+                }
+
+                public void setEmailId(String emailId) {
+
+                    this.emailId = emailId;
+                }
+
+                @Override
+                public String toString() {
+                    return "Person{" +
+                            "fName='" + fName + '\'' +
+                            ", lName='" + lName + '\'' +
+                            ", address='" + address + '\'' +
+                            ", city='" + city + '\'' +
+                            ", state='" + state + '\'' +
+                            ", zip=" + zip +
+                            ", phoneNumber=" + phoneNumber +
+                            ", emailId='" + emailId + '\'' +
+                            '}';
+                }
+            }
