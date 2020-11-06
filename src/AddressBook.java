@@ -122,7 +122,7 @@ public class AddressBook {
     public void getUserChoice()
     {
         while (true){
-            System.out.println("1: Click For add new Person \n" +
+            System.out.println("1: Click to add new Person \n" +
                     "2: Click to update existing Person \n" +
                     "3: Click to print Person's list \n" +
                     "4: Click to delete contact \n" +
