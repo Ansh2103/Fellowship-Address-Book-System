@@ -53,8 +53,8 @@ public class AddressBook {
                 "6 : Please Enter zip code \n" +
                 "7 : Please Enter city \n" +
                 "8 : Please Enter state");
-        int selectOption = scanner.nextInt();
 
+        int selectOption = scanner.nextInt();
         switch (selectOption){
             case 1:
                 System.out.println("Please Enter the first name : ");
@@ -102,6 +102,18 @@ public class AddressBook {
         }
     }
 
+    public void deletePerson()
+    {
+        System.out.println("Enter the email id to delete : ");
+        String email = scanner.next();
+        if (!personList.containsKey(email))
+        {
+            System.out.println("Please provide valid email id");
+            deletePerson();
+        }
+        personList.remove(email);
+    }
+
     public void printAllDetails()
     {
         System.out.println(personList);
@@ -111,9 +123,10 @@ public class AddressBook {
     {
         while (true){
             System.out.println("1: Click For add new Person \n" +
-                    "2: Click For update existing Person \n" +
-                    "3: Click For print Person's list \n" +
-                    "0: Click For terminate the program");
+                    "2: Click to update existing Person \n" +
+                    "3: Click to print Person's list \n" +
+                    "4: Click to delete contact \n" +
+                    "0: Click to terminate the program");
             int selectedOption = scanner.nextInt();
             switch (selectedOption){
                 case 1:
@@ -126,6 +139,9 @@ public class AddressBook {
                     break;
                 case 3:
                     printAllDetails();
+                    break;
+                case 4:
+                    deletePerson();
                     break;
                 case 0:
                     System.exit(0);
