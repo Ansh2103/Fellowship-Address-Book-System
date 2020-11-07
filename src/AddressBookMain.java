@@ -9,14 +9,14 @@ public class AddressBookMain {
         HashMap<String, AddressBook> addressBookList = new HashMap<String, AddressBook>();
 
         while (true) {
-            System.out.println("1: Click to create new AddressBook \n" +
-                    "2: Click to access existing AddressBook \n" +
-                    "3: Click to terminate the program");
+            System.out.println("1: Create a new AddressBook \n" +
+                    "2: Want to access existing AddressBook \n" +
+                    "3:  Terminate ");
             int selectedOption = scanner.nextInt();
 
             switch (selectedOption) {
                 case 1:
-                    System.out.println("Enter AddressBook Name : ");
+                    System.out.println("Please Enter AddressBook Name : ");
                     String addressBookName = scanner.next();
                     AddressBook addressBooName = new AddressBook();
                     addressBookList.put(addressBookName, addressBooName);
