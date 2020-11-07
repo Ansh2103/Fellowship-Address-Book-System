@@ -8,7 +8,7 @@
                 private String phoneNumber;
                 private String emailId;
 
-                public Person() {
+        /*        public Person() {
                 }
 
                 public Person(String fName, String lName, String address, String city, String state, int zip, String phoneNumber, String emailId) {
@@ -21,7 +21,7 @@
                     this.phoneNumber = phoneNumber;
                     this.emailId = emailId;
                 }
-
+*/
                 public String getfName() {
                     return fName;
                 }

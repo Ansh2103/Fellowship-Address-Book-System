@@ -18,16 +18,25 @@ public class AddressBookMain {
                 case 1:
                     System.out.println("Please Enter AddressBook Name : ");
                     String addressBookName = scanner.next();
-                    AddressBook addressBooName = new AddressBook();
-                    addressBookList.put(addressBookName, addressBooName);
+
+                    if (addressBookList.containsKey(addressBookName)) {
+                        System.out.println("This addressBook already exist");
+                    } else {
+                        AddressBook addressBooName = new AddressBook();
+                        addressBookList.put(addressBookName, addressBooName);
+                    }
                     break;
                 case 2:
                     System.out.println(addressBookList.keySet() + "\n" +
                             "Please Select the AddressBook of your Choice");
                     String selectedAddressBook = scanner.next();
 
-                    AddressBook searchedAddressBook = addressBookList.get(selectedAddressBook);
-                    searchedAddressBook.getUserChoice();
+                    if (!addressBookList.containsKey(selectedAddressBook)) {
+                        System.out.println("Please provide valid AddressBook name");
+                    } else {
+                        AddressBook searchedAddressBook = addressBookList.get(selectedAddressBook);
+                        searchedAddressBook.getUserChoice();
+                    }
                     break;
                 case 0:
                     System.exit(0);
@@ -35,7 +44,6 @@ public class AddressBookMain {
                 default:
                     System.out.println("Please select valid option");
                     break;
-
             }
         }
     }
