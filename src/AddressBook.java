@@ -63,8 +63,8 @@ public class AddressBook {
                 "6 : Please Enter zip code \n" +
                 "7 : Please Enter city \n" +
                 "8 : Please Enter state");
-        int selectOption = scanner.nextInt();
 
+        int selectOption = scanner.nextInt();
         switch (selectOption){
             case 1:
                 System.out.println("Please Enter the first name : ");
@@ -156,6 +156,13 @@ public class AddressBook {
         System.out.println(filteredCountContact);
     }
 
+    public void sortContactsByFName()
+    {
+        List <Person> valueList=new ArrayList<Person>(personList.values());
+
+        valueList.sort((Person m1, Person m2)->m1.getfName().compareTo(m2.getfName()));
+        valueList.forEach((m)->System.out.println(m));
+    }
 
     public void getUserChoice()
     {
@@ -167,6 +174,7 @@ public class AddressBook {
                     "4: Click to delete contact \n" +
                     "5: Click to search by city or state : \n" +
                     "6: Click to count the number of Person belong to same city or state \n" +
+                    "7: For sort by first name \n" +
                     "0: Click to terminate the program");
             int selectedOption = scanner.nextInt();
             switch (selectedOption){
@@ -188,6 +196,9 @@ public class AddressBook {
 
                 case 6:
                     countByCityOrState();
+                    break;
+                case 7:
+                    sortContactsByFName();
                     break;
                 case 0:
                     System.exit(0);

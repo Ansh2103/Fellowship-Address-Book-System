@@ -11,7 +11,7 @@ public class AddressBookMain {
         while (true) {
             System.out.println("1: Create a new AddressBook \n" +
                     "2: Want to access existing AddressBook \n" +
-                    "3:  Terminate ");
+                    "0:  Terminate ");
             int selectedOption = scanner.nextInt();
 
             switch (selectedOption) {
