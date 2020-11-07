@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class AddressBook {
     HashMap <String, Person> personList = new HashMap<String, Person>();
@@ -103,7 +105,21 @@ public class AddressBook {
                 break;
         }
     }
+    public void searchByCityorState(){
 
+        System.out.println("Enter city name : ");
+        String city = scanner.next();
+        System.out.println("Enter state name : ");
+        String state = scanner.next();
+
+        Map<String, Person> filteredContact = personList.entrySet()
+                .stream()
+                .filter(map -> map.getValue().getState().contains(state))
+                .filter(map -> map.getValue().getCity().contains(city))
+                .collect(Collectors.toMap(map -> map.getKey(), map -> map.getValue()));
+
+        System.out.println(filteredContact);
+    }
     public void deletePerson()
     {
         System.out.println("Enter the email id to delete : ");
