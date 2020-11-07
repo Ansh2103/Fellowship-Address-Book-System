@@ -8,6 +8,19 @@
                 private String phoneNumber;
                 private String emailId;
 
+                public Person() {
+                }
+
+                public Person(String fName, String lName, String address, String city, String state, int zip, String phoneNumber, String emailId) {
+                    this.fName = fName;
+                    this.lName = lName;
+                    this.address = address;
+                    this.city = city;
+                    this.state = state;
+                    this.zip = zip;
+                    this.phoneNumber = phoneNumber;
+                    this.emailId = emailId;
+                }
 
                 public String getfName() {
                     return fName;

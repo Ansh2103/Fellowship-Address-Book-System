@@ -39,8 +39,10 @@ public class AddressBook {
 
     public void addNewContact()
     {
-        Person person = getDetailsFromUser();
-        personList.put(person.getEmailId(), person);
+        testDrivenData testSampleData = new testDrivenData();
+     //   Person person = getDetailsFromUser();
+     //   personList.put(person.getEmailId(), person);
+        personList = testSampleData.sampleData();
     }
     public void updateContactDetail(String emailId){
         Person person = personList.get(emailId);
